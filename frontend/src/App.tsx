@@ -14,9 +14,8 @@ function App() {
       <Header />
       {account ? (
         <div>
-          <p>contractAddress: {contractAddress}</p>
-          <DisplayMessage />
-          <UpdateMessage />
+          <DisplayMessage contractAddress={contractAddress} />
+          <UpdateMessage contractAddress={contractAddress} />
         </div>
       ) : (
         <p>Please connect your wallet</p>

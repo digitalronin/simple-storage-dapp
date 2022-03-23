@@ -1,7 +1,11 @@
-export const DisplayMessage = () => {
+export interface DisplayMessageProps {
+  contractAddress: string
+}
+
+export const DisplayMessage = ({contractAddress}: DisplayMessageProps) => {
   return (
     <div>
-      DisplayMessage
+      DisplayMessage {contractAddress}
     </div>
   )
 }
