@@ -1,7 +1,17 @@
+import {useEthers} from "@usedapp/core"
+import {Header} from "./components/Header"
+
 function App() {
+  const {account} = useEthers()
+
   return (
     <div>
-      Hello
+      <Header />
+      {account ? (
+        <p>Connected</p>
+      ) : (
+        <p>Please connect your wallet</p>
+      )}
     </div>
   );
 }
