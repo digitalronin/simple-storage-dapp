@@ -1,4 +1,5 @@
 import {useEthers} from "@usedapp/core"
+import {Container} from "@material-ui/core"
 import {Header} from "./components/Header"
 import {DisplayMessage} from "./components/DisplayMessage"
 import {UpdateMessage} from "./components/UpdateMessage"
@@ -11,15 +12,17 @@ function App() {
 
   return (
     <div>
-      <Header />
-      {account ? (
-        <div>
-          <DisplayMessage contractAddress={contractAddress} />
-          <UpdateMessage contractAddress={contractAddress} />
-        </div>
-      ) : (
-        <p>Please connect your wallet</p>
-      )}
+      <Container maxWidth="md">
+        <Header />
+        {account ? (
+          <div>
+            <DisplayMessage contractAddress={contractAddress} />
+            <UpdateMessage contractAddress={contractAddress} />
+          </div>
+        ) : (
+          <p>Please connect your wallet</p>
+        )}
+      </Container>
     </div>
   );
 }
