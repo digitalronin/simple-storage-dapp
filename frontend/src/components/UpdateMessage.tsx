@@ -1,5 +1,6 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import {makeStyles, Card, CardContent, Input, Button, CircularProgress} from "@material-ui/core"
+import {useNotifications} from "@usedapp/core"
 import {useUpdateMessage} from "../hooks/useUpdateMessage"
 
 export interface UpdateMessageProps {
@@ -18,6 +19,7 @@ export const UpdateMessage = ({contractAddress}: UpdateMessageProps) => {
   const {updateMessage, state: updateMessageState} = useUpdateMessage(contractAddress)
   const isMining = updateMessageState.status === "Mining"
   const isInputEmpty = message === ""
+  const {notifications} = useNotifications()
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value)
@@ -26,6 +28,14 @@ export const UpdateMessage = ({contractAddress}: UpdateMessageProps) => {
   const handleSubmit = () => {
     return updateMessage(message)
   }
+
+  useEffect(() => {
+    if (notifications.filter((notification) =>
+      notification.type === "transactionSucceed" &&
+      notification.transactionName === "Update Message").length > 0) {
+      setMessage("")
+    }
+  }, [notifications, updateMessageState])
 
   return (
     <Card className={classes.spaced}>

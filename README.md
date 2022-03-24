@@ -6,7 +6,6 @@ The smart contract stores and updates a "message" string, and the front-end disp
 
 ## TODO
 
-- Clear the input field on submit
 - Use a modal to force user to connect wallet
 - Show the currently-connected chain
 - Prompt the user to switch to a supported chain
@@ -19,3 +18,4 @@ The smart contract stores and updates a "message" string, and the front-end disp
 - Deploy contracts to Rinkeby
 - Deploy on Heroku/Github pages
 - Stay connected on page refresh (if possible)
+- Enable user to hit return in the input field to update the message
