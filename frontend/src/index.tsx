@@ -6,7 +6,7 @@ import App from './App';
 
 const config = {
   multicallAddresses: {
-    "1337": "0x0000000000000000000000000000000000000000",
+    "1337": "0xedf60d8b70c7b7197fb174da69de8e2bf34abcfe",
   },
 }
 
