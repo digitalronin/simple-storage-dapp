@@ -16,6 +16,8 @@ export const UpdateMessage = ({contractAddress}: UpdateMessageProps) => {
   const classes = useStyles()
   const [message, setMessage] = useState<string>("")
   const {updateMessage, state: updateMessageState} = useUpdateMessage(contractAddress)
+  const isMining = updateMessageState.status === "Mining"
+  const isInputEmpty = message === ""
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value)
@@ -32,7 +34,12 @@ export const UpdateMessage = ({contractAddress}: UpdateMessageProps) => {
       </CardContent>
       <CardContent>
         <Input type="text" onChange={handleInputChange} value={message} className={classes.spaced} />
-        <Button variant="outlined" onClick={handleSubmit}>Update</Button>
+        <Button
+          variant="outlined"
+          disabled={isMining || isInputEmpty}
+          onClick={handleSubmit}>
+          Update
+        </Button>
       </CardContent>
     </Card>
   )
