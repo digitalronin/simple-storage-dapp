@@ -6,11 +6,9 @@ The smart contract stores and updates a "message" string, and the front-end disp
 
 ## TODO
 
-- Show the current message
 - Enable user to update the message
 - Update the displayed message if it changes
 - Use a modal to force user to connect wallet
-- Display the current message in DisplayMessage
 - Update the message
 - Show the currently-connected chain
 - Prompt the user to switch to a supported chain
