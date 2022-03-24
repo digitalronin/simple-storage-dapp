@@ -6,13 +6,11 @@ The smart contract stores and updates a "message" string, and the front-end disp
 
 ## TODO
 
-- Enable user to update the message
-- Update the displayed message if it changes
+- Make it prettier
+- Show a spinner while waiting for updateMessage TX
 - Use a modal to force user to connect wallet
-- Update the message
 - Show the currently-connected chain
 - Prompt the user to switch to a supported chain
-- Make it prettier
 - Deploy to github pages
 - Automate frontend redeployment with github actions
 - Make it mobile-friendly
@@ -21,4 +19,4 @@ The smart contract stores and updates a "message" string, and the front-end disp
 - Disconnect if the user switches accounts in their wallet
 - Deploy contracts to Rinkeby
 - Deploy on Heroku/Github pages
-
+- Stay connected on page refresh (if possible)
