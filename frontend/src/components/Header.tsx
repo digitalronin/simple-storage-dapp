@@ -14,15 +14,12 @@ export const Header = () => {
   const classes = useStyles()
   const {account, activateBrowserWallet, deactivate} = useEthers()
 
+  const wallet = shortenIfAddress(account)
+
   return (
     <div className={classes.container}>
       {account ? (
-        <div>
-          <p>
-            {shortenIfAddress(account)}
-            <Button color="primary" variant="contained" onClick={() => deactivate()}>Disconnect</Button>
-          </p>
-        </div>
+        <Button color="primary" variant="contained" onClick={() => deactivate()}>Disconnect ({wallet})</Button>
       ) : (
         <Button color="primary" variant="contained" onClick={() => activateBrowserWallet()}>Connect wallet</Button>
       )}
