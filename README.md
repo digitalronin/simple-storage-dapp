@@ -6,8 +6,7 @@ The smart contract stores and updates a "message" string, and the front-end disp
 
 ## TODO
 
-- Make it prettier
-- Show a spinner while waiting for updateMessage TX
+- Clear the input field on submit
 - Use a modal to force user to connect wallet
 - Show the currently-connected chain
 - Prompt the user to switch to a supported chain

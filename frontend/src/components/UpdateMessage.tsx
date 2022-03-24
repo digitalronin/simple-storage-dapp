@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {makeStyles, Card, CardContent, Input, Button} from "@material-ui/core"
+import {makeStyles, Card, CardContent, Input, Button, CircularProgress} from "@material-ui/core"
 import {useUpdateMessage} from "../hooks/useUpdateMessage"
 
 export interface UpdateMessageProps {
@@ -38,7 +38,7 @@ export const UpdateMessage = ({contractAddress}: UpdateMessageProps) => {
           variant="outlined"
           disabled={isMining || isInputEmpty}
           onClick={handleSubmit}>
-          Update
+          {isMining ? <CircularProgress size={26} /> : "Update"}
         </Button>
       </CardContent>
     </Card>
