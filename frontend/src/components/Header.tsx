@@ -1,4 +1,4 @@
-import {useEthers} from "@usedapp/core"
+import {useEthers, shortenIfAddress} from "@usedapp/core"
 
 export const Header = () => {
   const {account, activateBrowserWallet, deactivate} = useEthers()
@@ -8,7 +8,7 @@ export const Header = () => {
       {account ? (
         <div>
           <p>
-            Address: {account}
+            {shortenIfAddress(account)}
             <button onClick={() => deactivate()}>Disconnect</button>
           </p>
         </div>
