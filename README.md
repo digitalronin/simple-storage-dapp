@@ -9,8 +9,6 @@ The smart contract stores and updates a "message" string, and the front-end disp
 - Use a modal to force user to connect wallet
 - Show the currently-connected chain
 - Prompt the user to switch to a supported chain
-- Deploy to github pages
-- Automate frontend redeployment with github actions
 - Make it mobile-friendly
 - Replace favicon.ico and logoXXX.png
 - refresh the app. if the user switches chains/accounts
