@@ -1,5 +1,6 @@
 import {useEthers} from "@usedapp/core"
 import {Container} from "@material-ui/core"
+import Alert from "@material-ui/lab/Alert"
 import {Header} from "./components/Header"
 import {DisplayMessage} from "./components/DisplayMessage"
 import {UpdateMessage} from "./components/UpdateMessage"
@@ -20,7 +21,7 @@ function App() {
             <UpdateMessage contractAddress={contractAddress} />
           </div>
         ) : (
-          <p>Please connect your wallet</p>
+          <Alert severity="info">Please connect your wallet</Alert>
         )}
       </Container>
     </div>
