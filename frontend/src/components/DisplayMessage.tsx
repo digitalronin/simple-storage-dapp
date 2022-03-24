@@ -9,8 +9,7 @@ export const DisplayMessage = ({contractAddress}: DisplayMessageProps) => {
 
   return (
     <div>
-      DisplayMessage {contractAddress}
-      <p>Message: {message}</p>
+      DisplayMessage: {message}
     </div>
   )
 }
