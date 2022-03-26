@@ -1,5 +1,5 @@
 import {useEthers} from "@usedapp/core"
-import {Container, makeStyles} from "@material-ui/core"
+import {Container, makeStyles, Chip, Avatar} from "@material-ui/core"
 import Alert from "@material-ui/lab/Alert"
 import {Header} from "./components/Header"
 import {DisplayMessage} from "./components/DisplayMessage"
@@ -10,6 +10,10 @@ import {getSimpleStorageContractAddress} from "./utils"
 const useStyles = makeStyles((theme) => ({
   spaced: {
     margin: theme.spacing(2)
+  },
+  footer: {
+    marginTop: theme.spacing(3),
+    textAlign: "center"
   }
 }))
 
@@ -31,6 +35,15 @@ function App() {
         ) : (
           <Alert severity="info">Please connect your wallet</Alert>
         )}
+        <footer className={classes.footer}>
+          <Chip
+            label="View source on GitHub"
+            component="a"
+            href="https://github.com/digitalronin/simple-storage-dapp"
+            avatar={<Avatar alt="GitHub" src="https://external-content.duckduckgo.com/ip3/github.com.ico" />}
+            clickable
+          />
+        </footer>
       </Container>
     </div>
   );
