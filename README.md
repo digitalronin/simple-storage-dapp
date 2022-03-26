@@ -10,14 +10,13 @@ The app. is deployed on GitHub Pages, and can be viewed [here][deployed url].
 
 > The SimpleStorage contract is deployed on the Rinkeby test network, so that's the only network you can use if you want to interact with the deployed app.
 
+A [GitHub Action](.github/workflows/deploy.yml) automatically redeploys the frontend whenever a change is pushed to the `main` branch.
+
 ## TODO
 
 - Use a modal to force user to connect wallet
-- Show the currently-connected chain
 - Prompt the user to switch to a supported chain
-- Make it mobile-friendly
 - Replace favicon.ico and logoXXX.png
-- refresh the app. if the user switches chains/accounts
 - Disconnect if the user switches accounts in their wallet
 - Stay connected on page refresh (if possible)
 - Enable user to hit return in the input field to update the message
