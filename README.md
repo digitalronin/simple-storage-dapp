@@ -16,7 +16,6 @@ A [GitHub Action](.github/workflows/deploy.yml) automatically redeploys the fron
 
 - Use a modal to force user to connect wallet
 - Prompt the user to switch to a supported chain
-- Replace favicon.ico and logoXXX.png
 - Disconnect if the user switches accounts in their wallet
 - Stay connected on page refresh (if possible)
 - Enable user to hit return in the input field to update the message
