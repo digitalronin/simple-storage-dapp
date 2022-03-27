@@ -26,14 +26,25 @@ function App() {
     <div>
       <Container maxWidth="md">
         <Header />
-        <h1 className={classes.spaced}>Simple Storage Dapp</h1>
+        <div className={classes.spaced}>
+          <h1>Simple Storage Dapp</h1>
+          <p>
+            This is a 'full-stack' implementation of the simplest possible Dapp.
+          </p>
+          <p>
+            A 'SimpleStorage' smart contract stores a message on the blockchain, which can be updated by anyone.
+          </p>
+          <p>
+            The purpose of this app. is to provide a simple working example around which to implement all of the 'housekeeping' required for a Dapp; i.e. the non-functional code required by any Dapp such as (dis)connecting a wallet, managing the UI elements, and providing feedback on transaction status.
+          </p>
+        </div>
         {account ? (
           <div>
             <DisplayMessage contractAddress={contractAddress} />
             <UpdateMessage contractAddress={contractAddress} />
           </div>
         ) : (
-          <Alert severity="info">Please connect your wallet</Alert>
+          <Alert severity="info" className={classes.spaced}>Please connect your wallet</Alert>
         )}
         <footer className={classes.footer}>
           <Chip
