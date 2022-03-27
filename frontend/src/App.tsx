@@ -38,13 +38,13 @@ function App() {
             The purpose of this app. is to provide a simple working example around which to implement all of the 'housekeeping' required for a Dapp; i.e. the non-functional code required by any Dapp such as (dis)connecting a wallet, managing the UI elements, and providing feedback on transaction status.
           </p>
         </div>
+        <DisplayMessage contractAddress={contractAddress} />
         {account ? (
           <div>
-            <DisplayMessage contractAddress={contractAddress} />
             <UpdateMessage contractAddress={contractAddress} />
           </div>
         ) : (
-          <Alert severity="info" className={classes.spaced}>Please connect your wallet</Alert>
+          <Alert severity="info" className={classes.spaced}>Please connect your wallet to update the message</Alert>
         )}
         <footer className={classes.footer}>
           <Chip
