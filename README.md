@@ -14,6 +14,7 @@ A [GitHub Action](.github/workflows/deploy.yml) automatically redeploys the fron
 
 ## TODO
 
+- Display current message for unconnected users (currently, they see "undefined" until they connect their wallet)
 - Use a modal to force user to connect wallet
 - Prompt the user to switch to a supported chain
 - Disconnect if the user switches accounts in their wallet
